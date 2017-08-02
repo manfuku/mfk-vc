@@ -2,10 +2,10 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no" />
 
-<link href="//fonts.googleapis.com/css?family=Arimo:400,700|Material+Icons" rel="stylesheet">
 <link href="//cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Material+Icons" rel="stylesheet">
 
 <?php wp_head(); ?>
 
@@ -18,7 +18,7 @@
 
 <header id="header" role="banner" class="row">
 	<div class="container">
-	<div class="row">
+	<div id="header-nav" class="row align-items-center">
 		<section id="branding" class="col">
 			<div id="site-title"><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?></div>
 			<div id="site-description"><?php bloginfo( 'description' ); ?></div>

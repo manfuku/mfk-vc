@@ -1,13 +1,15 @@
+$color-light:		#fff;
+$color-dark:		#000;
+
+$color-primary:		$color-dark;
+$color-secondary:	#0f0; 
 
 
-
-/* html { font-size: 16px; } */
 
 body {
-font-size: 15px;
 line-height: 1.5;
-font-family: Roboto Slab, Microsoft Yahei, STXihei, serif;
-background: #333;
+font-family: TeX Gyre Heros, Microsoft Yahei, STXihei, serif;
+/* background: #333; */
 }
 
 a:link, a:visited, a:focus, a:hover { 
@@ -22,12 +24,12 @@ img { vertical-align: top; }
 position: fixed;
 width: 100%;
 z-index: 1;
-background: inherit;
-background: #000;
-color: #fff; 
+background: rgba($color-light,0.95);
+box-shadow: 0 0.25rem 3rem rgba($color-primary,0.1);
 
 a { display: inline-block;
 img {
+	max-width: 100%;
 	max-height: 3rem; 
 	}
 
@@ -36,6 +38,17 @@ img {
 
 #header-nav {
 height: 5rem;
+}
+
+
+#menu ul {
+	margin: 0;
+	padding: 0;
+	
+	li {
+	display: inline-block;
+	margin-left: 1rem;
+	}
 }
 
 #main {
@@ -60,7 +73,7 @@ width: 1680px;
 .entry-content > .vc_row,
 .entry-content > .vc_vc_row > .vc_row {
 padding: 5rem 0;
-border-bottom: 1px #000 dashed;
+border-bottom: 1px rgba($color-dark,0.5) dashed;
 }
 
 .entry-content > .vc_row:first-child {
@@ -70,7 +83,8 @@ padding-top: calc(5rem + 5rem)
 
 #footer {
 padding: 5rem 0;
-background: #333;
-color: #fff; 
+
+/* background: #333;
+color: #fff; */ 
 
 }

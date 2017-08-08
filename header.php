@@ -6,7 +6,8 @@
 
 
 <link href="//cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
-<link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700|Material+Icons" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Arimo:400,700|Material+Icons" rel="stylesheet">
+<link href="//brick.a.ssl.fastly.net/TeX+Gyre+Heros:400,700:f" rel="stylesheet">
 
 <?php wp_head(); ?>
 
@@ -21,20 +22,21 @@
 <header id="header" role="banner" class="row">
 	<div class="container">
 	<div id="header-nav" class="row align-items-center">
-		<section id="branding" class="col">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><img src="http://lorempixel.com/400/80/"></a>
-			
-			
+	
+		<section id="branding" class="col-6 col-md-3">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">
+			<img src="https://res.cloudinary.com/manfuku/image/upload/v1502079516/FakeDesignCorp_xtc8pm.svg">
+			</a>
 		</section>
+		
 		<nav id="menu" role="navigation" class="col hidden-md-down ">
-			<div id="search">
-			<?php get_search_form(); ?>
-			</div>
 			<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 		</nav>
-		<div id="menu-toggle-container" class="col hidden-lg-up d-flex align-items-end">
+		
+		<section id="menu-toggle-container" class="col hidden-lg-up d-flex align-items-end">
 			<i  id="menu-toggle" class="material-icons">menu</i>
-		</div>
+		</section>
+		
 	</div>
 	</div>
 </header>
